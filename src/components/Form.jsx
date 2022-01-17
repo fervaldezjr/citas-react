@@ -14,6 +14,10 @@ const Form = ({ pacientes, setPacientes, paciente }) => {
         console.log(paciente)
     }, [paciente])
 
+    useEffect( () => {
+        console.log('El componente esta listo')
+    }, [])
+
     const generarId = () => {
         const random = Math.random().toString(36).substr(2);
         const fecha = Date.now().toString(36)
