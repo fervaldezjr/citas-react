@@ -11,12 +11,8 @@ const Form = ({ pacientes, setPacientes, paciente }) => {
     const [error, setError] = useState(false);
 
     useEffect( () => {
-        console.log(paciente)
-    }, [paciente])
 
-    useEffect( () => {
-        console.log('El componente esta listo')
-    }, [])
+    }, [paciente])
 
     const generarId = () => {
         const random = Math.random().toString(36).substr(2);
