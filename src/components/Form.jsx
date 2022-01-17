@@ -1,14 +1,18 @@
 import { useState, useEffect } from "react"
 import Error from "./Error"
 
-const Form = ({ pacientes, setPacientes }) => {
+const Form = ({ pacientes, setPacientes, paciente }) => {
     const [nombre, setNombre] = useState('');
     const [propietario, setPropietario] = useState('');
     const [email, setEmail] = useState('');
     const [fecha, setFecha] = useState('');
     const [sintomas, setSintomas] = useState('');
 
-    const [error, setError] = useState(false)
+    const [error, setError] = useState(false);
+
+    useEffect( () => {
+        console.log(paciente)
+    }, [paciente])
 
     const generarId = () => {
         const random = Math.random().toString(36).substr(2);
