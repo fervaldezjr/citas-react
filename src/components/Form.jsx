@@ -55,6 +55,7 @@ const Form = ({ pacientes, setPacientes, paciente }) => {
             const pacientesActualizados = pacientes.map(pacienteState => pacienteState.id = paciente.id === paciente.id ? objetoPaciente : pacienteState)
 
             setPacientes(pacientesActualizados)
+            setPaciente({})
         } else {
             // Nuevo registro
             objetoPaciente.id = generarId();
