@@ -163,10 +163,10 @@ const Form = ({ pacientes, setPacientes, paciente, setPaciente }) => {
                 <input
                      type="submit"
                      className="bg-indigo-600 w-full p-3 text-white uppercase font-bold hover:bg-indigo-700 cursor-pointer transtion-colors mb-10"
-                     value={ paciente.id ? "Editar paciente" : "Agregar paciente" }
+                     value={ paciente.id ? "Editar paciente" : "Agregar pacientes" }
                 />
            </form>
-        </div>
+        </div> 
     )
 }
 
