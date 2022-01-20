@@ -46,12 +46,22 @@ const Form = ({ pacientes, setPacientes, paciente }) => {
             propietario, 
             email, 
             fecha, 
-            sintomas,
-            id: generarId()
+            sintomas
         }
 
-        // console.log(objetoPaciente)
-        setPacientes([...pacientes, objetoPaciente]);
+        if(paciente.id) {
+            // Editando el registro
+            objetoPaciente.id = paciente.id;
+            const pacientesActualizados = pacientes.map(pacienteState => pacienteState.id = paciente.id === paciente.id ? objetoPaciente : pacienteState)
+
+            setPacientes(pacientesActualizados)
+        } else {
+            // Nuevo registro
+            objetoPaciente.id = generarId();
+            setPacientes([...pacientes, objetoPaciente]);
+        }
+
+        
 
         // Restart form
         setNombre('')
